@@ -4,26 +4,26 @@ A production-ready machine learning system for classifying cat breeds from genom
 
 ## 🎯 Project Overview
 
-This project implements a comprehensive cat breed classification system that achieves **98.1% accuracy** on purebred cats using genomic data. The system processes SNP markers to identify breed-specific genetic patterns and provides multiple interfaces for prediction including Excel-based tools for non-technical users.
+This project implements a production-ready cat breed classification system that achieves **90.58% accuracy** using standardized ISAG genomic markers. The system processes 93 biologically-validated SNP markers to identify breed-specific genetic patterns and provides multiple interfaces for prediction including Excel-based tools for non-technical users.
 
 ## 🚀 Key Features
 
-- **High Accuracy**: 98.1% classification accuracy on purebred cats
-- **Production Ready**: Complete deployment pipeline with validation scripts
+- **Production Ready**: 90.58% accuracy with standardized ISAG markers
+- **Veterinary Standard**: Uses ISAG reference panel for consistent results
 - **Excel Integration**: User-friendly Excel interfaces for predictions
 - **Multiple Data Formats**: Supports standard and Affymetrix array formats
 - **Comprehensive Documentation**: Detailed guides for deployment and usage
-- **Research Foundation**: Built on peer-reviewed genomic research data
+- **Standardized Markers**: Built on ISAG feline genomic panel
 
 ## 📊 Performance Metrics
 
 | Metric | Score |
 |--------|--------|
-| **Overall Accuracy** | 98.1% |
-| **Cross-Validation** | 10-fold stratified |
-| **Model Type** | Random Forest (500 trees) |
-| **Training Data** | 1,024 purebred cats, 25 breeds |
-| **SNP Markers** | 62,897 genomic positions |
+| **Overall Accuracy** | 90.58% |
+| **Cross-Validation** | 5-fold stratified |
+| **Model Type** | Random Forest (300 trees) |
+| **Training Data** | 2,016 purebred cats, 7 breeds |
+| **SNP Markers** | 93 ISAG standardized markers |
 
 ## 🔧 Quick Start
 
@@ -74,13 +74,15 @@ This project is based on the research paper:
 
 ### Supported Cat Breeds
 
-The system can classify the following 25 purebred cat breeds:
+The production system can classify the following 7 purebred cat breeds:
 
-- **Asian Breeds**: Siamese, Burmese, Birman, Ragdoll
-- **European Breeds**: British Shorthair, Russian Blue, Norwegian Forest Cat
-- **American Breeds**: Maine Coon, American Shorthair, Abyssinian
-- **Exotic Breeds**: Persian, Exotic Shorthair, Scottish Fold
-- And 12+ additional breeds with high genetic distinctiveness
+1. **Bengal Cat** - Distinctive spotted/marbled patterns
+2. **British Shorthair** - Classic European breed
+3. **Maine Coon** - Large American longhair breed
+4. **Norwegian Forest Cat** - Scandinavian forest breed
+5. **Ragdoll** - Large, docile breed with color-point patterns
+6. **Sphynx Cat** - Hairless breed with unique genetic markers
+7. **Thai Cat** - Traditional Siamese-type breed
 
 ## 📈 Technical Implementation
 
@@ -90,17 +92,17 @@ The system can classify the following 25 purebred cat breeds:
 - **Validation**: Tested against 4 different encoding strategies
 
 ### Model Architecture
-- **Algorithm**: Random Forest with 500 trees
-- **Features**: 62,897 SNP markers after quality control
-- **Cross-Validation**: 10-fold stratified sampling
-- **Memory**: Optimized for 2-3GB RAM usage
+- **Algorithm**: Random Forest with 300 trees
+- **Features**: 93 ISAG standardized SNP markers (ISAGFC01-ISAGFC98)
+- **Cross-Validation**: 5-fold stratified sampling
+- **Memory**: Optimized for 2GB RAM usage
 
 ### Data Processing Pipeline
-1. **Quality Control**: Remove low-quality SNPs and samples
-2. **Breed Filtering**: Focus on breeds with sufficient sample sizes (≥5 samples)
-3. **Encoding Optimization**: Convert nominal to numerical format
-4. **Model Training**: Random Forest with hyperparameter optimization
-5. **Validation**: Cross-validation and independent test sets
+1. **ISAG Panel Selection**: Use standardized 93 SNP markers
+2. **Biological Encoding**: Apply reference/alternate allele mapping
+3. **Breed Standardization**: Focus on 7 genetically distinct breeds
+4. **Model Training**: Random Forest with optimized parameters
+5. **Validation**: 5-fold cross-validation with stratified sampling
 
 ## 📚 Documentation
 
